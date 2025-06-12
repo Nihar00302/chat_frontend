@@ -58,7 +58,7 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
       console.log('Using dynamic backend URL:', serverUrl);
     }
 
-    serverUrl = 'https://backend-chat-zsoq.onrender.com';
+    serverUrl = 'ws://backend-chat-zsoq.onrender.com';
     
     const newSocket = io(serverUrl, {
       reconnectionAttempts: 10,
