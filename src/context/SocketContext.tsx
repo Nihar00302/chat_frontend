@@ -48,15 +48,17 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
     if (ngrokBackendUrl && ngrokBackendUrl !== '') {
       // Use the ngrok URL if available
       // serverUrl = ngrokBackendUrl;
-      serverUrl = ' https://backend-chat-zsoq.onrender.com';
+      serverUrl = 'https://backend-chat-zsoq.onrender.com';
       console.log('Using ngrok backend URL:', serverUrl);
     } else {
       // Fallback to dynamic URL based on current hostname
       const host = window.location.hostname;
       // serverUrl = `${window.location.protocol}//${host}:4000`; 
-      serverUrl = ' https://backend-chat-zsoq.onrender.com';// Using port 4000
+      serverUrl = 'https://backend-chat-zsoq.onrender.com';// Using port 4000
       console.log('Using dynamic backend URL:', serverUrl);
     }
+
+    serverUrl = 'https://backend-chat-zsoq.onrender.com';
     
     const newSocket = io(serverUrl, {
       reconnectionAttempts: 10,
