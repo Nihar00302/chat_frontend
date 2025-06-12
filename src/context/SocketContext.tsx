@@ -52,7 +52,8 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
     } else {
       // Fallback to dynamic URL based on current hostname
       const host = window.location.hostname;
-      serverUrl = `${window.location.protocol}//${host}:4000`; // Using port 4000
+      // serverUrl = `${window.location.protocol}//${host}:4000`; 
+      serverUrl = ' https://backend-chat-zsoq.onrender.com';// Using port 4000
       console.log('Using dynamic backend URL:', serverUrl);
     }
     
