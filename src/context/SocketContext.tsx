@@ -47,7 +47,8 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
     
     if (ngrokBackendUrl && ngrokBackendUrl !== '') {
       // Use the ngrok URL if available
-      serverUrl = ngrokBackendUrl;
+      // serverUrl = ngrokBackendUrl;
+      serverUrl = ' https://backend-chat-zsoq.onrender.com';
       console.log('Using ngrok backend URL:', serverUrl);
     } else {
       // Fallback to dynamic URL based on current hostname
